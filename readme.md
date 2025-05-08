@@ -1,17 +1,17 @@
 # Project Pingsucker
 
 ** A passive-aggressive network appliance designed to frustrate latency-sensitive gamers and make online games feel like they're haunted by the ghost of 2008 Wi-Fi. **
-This tool uses `tc netem` and `iptables` to inject just enough jitter, delay, and packet loss into outbound UDP traffic to make competitive games frustratingly unplayable ñ without breaking basic web, video, or chat traffic. It's designed to run on a Raspberry Pi 3B+ with two network interfaces (e.g., built-in Ethernet and a USB-Ethernet adapter) acting as a transparent bridge or upstream router.
+This tool uses `tc netem` and `iptables` to inject just enough jitter, delay, and packet loss into outbound UDP traffic to make competitive games frustratingly unplayable ‚Äì without breaking basic web, video, or chat traffic. It's designed to run on a Raspberry Pi 3B+ with two network interfaces (e.g., built-in Ethernet and a USB-Ethernet adapter) acting as a transparent bridge or upstream router.
 
 ---
 ## Why?
 
-Because sometimes the problem *isn't* the network ñ it's who you're sharing it with.
+Because sometimes the problem *isn't* the network ‚Äì it's who you're sharing it with.
 
-Maybe you're a parent with teenagers who have no idea Ö absolutely no idea just what youíre willing to do with a bit of free time and a vibe-coding session with ChatGPT
-Maybe you're tired of bandwidth-hogging, voice-chat-screaming, chair-punching housemates.  
-Maybe you're a troll with a conscience.  
-Or maybe you're just curious what it feels like to weaponize latency without touching a firewall rule.
+- Maybe you're a parent with teenagers who have no idea ‚Ä¶ absolutely no idea just what you‚Äôre willing to do with a bit of free time and a vibe-coding session with ChatGPT
+- Maybe you're tired of bandwidth-hogging, voice-chat-screaming, chair-punching housemates.  
+- Maybe you're a troll with a conscience.  
+- Or maybe you're just curious what it feels like to weaponize latency without touching a firewall rule.
 Whatever your motive, this tool introduces *plausible, periodic chaos* into UDP traffic while leaving everything else mostly untouched. Your users *will* notice... but they probably won't understand why.
 
 ---
@@ -21,14 +21,14 @@ Whatever your motive, this tool introduces *plausible, periodic chaos* into UDP 
 - Assigns static IP to `subnet` interface and enables forwarding
 - Runs a `dnsmasq` DHCP server for the LAN side
 - Configures a `tc netem` queue to inject:
-  - Randomized delay (`0ñ361ms`)
-  - Jitter (`±5ñ19ms`)
-  - Packet loss (`0ñ4%`)
+  - Randomized delay (`0‚Äì361ms`)
+  - Jitter (`¬±5‚Äì19ms`)
+  - Packet loss (`0‚Äì4%`)
   - Probability-based "sanity windows" (occasional 0-delay bursts)
 - Filters only **UDP traffic**, excluding DNS and DHCP
 
 ---
-## What It Doesnít Do
+## What It Doesn‚Äôt Do
 
 - Intercept or decrypt traffic
 - Touch TCP flows (web browsing remains usable)
@@ -73,8 +73,8 @@ This is not a security tool. This is not ethical hacking. This is network satire
 - This script flushes existing iptables rules.
 - Do **not** run this on a production system unless you're very sure of what you're doing.
 - Make sure the device is running behind a NAT or firewall.
-- UDP shaping may impact video-conferencing tools like Zoom or Teams. If the target network includes people who need to ìwork from homeî you might be messing with someone's gainful employment.
-- ChatGPT vibe-coding played a significant (who am I kidding, it played the *primary*) role in the creation of this tool. Short as it is, it still contains several anomalies and superfluous lines of code. Live with it Ö or fork it and clean it up if it bothers you enough.
+- UDP shaping may impact video-conferencing tools like Zoom or Teams. If the target network includes people who need to ‚Äúwork from home‚Äù you might be messing with someone's gainful employment.
+- ChatGPT vibe-coding played a significant (who am I kidding, it played the *primary*) role in the creation of this tool. Short as it is, it still contains several anomalies and superfluous lines of code. Live with it ‚Ä¶ or fork it and clean it up if it bothers you enough.
 **? Do not deploy on networks you don't own or control.  
 **? Don't use this to sabotage people maliciously.  
 **? You are responsible for how you use this. I just wrote the punchline.
