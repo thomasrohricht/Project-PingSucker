@@ -74,9 +74,9 @@ This is not a security tool. This is not ethical hacking. This is network satire
 - Do **not** run this on a production system unless you're very sure of what you're doing.
 - UDP shaping may impact video-conferencing tools like Zoom or Teams. If the target network includes people who need to “work from home” you might be messing with someone's gainful employment.
 - ChatGPT vibe-coding played a significant (who am I kidding, it played the *primary*) role in the creation of this tool. Short as it is, it still contains several anomalies and superfluous lines of code. Live with it … or fork it and clean it up if it bothers you enough.
-**? Do not deploy on networks you don't own or control.  
-**? Don't use this to sabotage people maliciously.  
-**? You are responsible for how you use this. I just wrote the punchline.
+- Do not deploy on networks you don't own or control.  
+- Don't use this to sabotage people maliciously.  
+- You are responsible for how you use this. I just wrote the punchline.
 
 ---
 ## Install
