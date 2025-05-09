@@ -47,7 +47,7 @@ Whatever your motive, this tool introduces *plausible, periodic chaos* into UDP 
 ---
 ## Hardware Requirements
 
-- Known to runs perfectly on a Raspberry Pi 3B+, but considering its simple mission in life this could probably run fine on lesser hardware
+- Known to run perfectly on a Raspberry Pi 3B+, but considering its simple mission in life this could probably run fine on lesser hardware
 - 2 NICs (e.g., built-in Ethernet + USB-Ethernet)
 - Debian or Raspbian Linux
 - Internet upstream on `uplink`
@@ -70,9 +70,8 @@ The Pi acts as a stealth inline router. Downstream devices get their IP from the
 ## Warnings & Disclaimers
 This is not a security tool. This is not ethical hacking. This is network satire in script form.
 
-- This script flushes existing iptables rules.
+- This script flushes existing iptables rules - make sure the device is running behind a NAT or firewall.
 - Do **not** run this on a production system unless you're very sure of what you're doing.
-- Make sure the device is running behind a NAT or firewall.
 - UDP shaping may impact video-conferencing tools like Zoom or Teams. If the target network includes people who need to “work from home” you might be messing with someone's gainful employment.
 - ChatGPT vibe-coding played a significant (who am I kidding, it played the *primary*) role in the creation of this tool. Short as it is, it still contains several anomalies and superfluous lines of code. Live with it … or fork it and clean it up if it bothers you enough.
 **? Do not deploy on networks you don't own or control.  
